@@ -14,7 +14,7 @@ angular.module('DropinApp', ['ngMaterial'])
 
       $http({
         method: 'POST',
-        url: 'http://192.168.1.2:3000/api/v1/token'
+        url: 'http://localhost:3000/api/v1/token'
       }).success(function (data) {
 
         console.log(data.client_token);
@@ -29,7 +29,7 @@ angular.module('DropinApp', ['ngMaterial'])
 
             $http({
               method: 'POST',
-              url: 'http://192.168.1.2:3000/api/v1/process',
+              url: 'http://localhost:3000/api/v1/process',
               data: {
                 amount: $scope.amount,
                 payment_method_nonce: nonce
